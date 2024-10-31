@@ -1,24 +1,18 @@
-const codeBlocks = document.querySelectorAll('code');
-const copyCodeButtons = document.querySelectorAll('.copy-code-button');
-
-copyCodeButtons.forEach((copyCodeButton, index) => {
-  const code = codeBlocks[index].innerText;
+document.querySelectorAll('.copy-code-button').forEach((copyCodeButton) => {
+  const codeBlock = copyCodeButton.closest('figure.code-block');
+  const code = codeBlock.querySelector('code').innerText;
+  const copiedAlert = codeBlock.querySelector('[role="alert"]');
 
   copyCodeButton.addEventListener('click', () => {
-    // Copy the code to the user's clipboard
     window.navigator.clipboard.writeText(code);
-
-    // Update the button text visually
-    const { innerText: originalText } = copyCodeButton;
-    copyCodeButton.innerText = 'Copied!';
-
-    // (Optional) Toggle a class for styling the button
     copyCodeButton.classList.add('copied');
+    copyCodeButton.innerText = 'Copied';
+    copiedAlert.innerText = 'Copied';
 
-    // After 2 seconds, reset the button to its initial UI
     setTimeout(() => {
-      copyCodeButton.innerText = originalText;
       copyCodeButton.classList.remove('copied');
+      copyCodeButton.innerText = 'Copy';
+      copiedAlert.innerText = '';
     }, 2000);
   });
 });
