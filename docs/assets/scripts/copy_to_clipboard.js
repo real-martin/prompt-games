@@ -1,18 +1,20 @@
-document.querySelectorAll('.copy-code-button').forEach((copyCodeButton) => {
-  const codeBlock = copyCodeButton.closest('figure.code-block');
-  const code = codeBlock.querySelector('code').innerText;
-  const copiedAlert = codeBlock.querySelector('[role="alert"]');
+document.querySelectorAll('pre.highlight').forEach((pre_code) => {
+	pre_code.style.setProperty('position', 'relative');
+	const code = pre_code.querySelector('code').innerText;
 
-  copyCodeButton.addEventListener('click', () => {
-    window.navigator.clipboard.writeText(code);
-    copyCodeButton.classList.add('copied');
-    copyCodeButton.innerText = 'Copied';
-    copiedAlert.innerText = 'Copied';
+	var copyCodeButton = document.createElement("Button");
+	copyCodeButton.innerHTML = "Copy";
+	copyCodeButton.style = "top:10px;right:10px;position:absolute;color:#ffffff;background-color:#000000";
+	pre_code.appendChild(copyCodeButton);
 
-    setTimeout(() => {
-      copyCodeButton.classList.remove('copied');
-      copyCodeButton.innerText = 'Copy';
-      copiedAlert.innerText = '';
-    }, 2000);
-  });
+	copyCodeButton.addEventListener('click', () => {
+	    window.navigator.clipboard.writeText(code);
+	    copyCodeButton.classList.add('copied');
+	    copyCodeButton.innerText = 'Copied';
+
+	    setTimeout(() => {
+	      copyCodeButton.classList.remove('copied');
+	      copyCodeButton.innerText = 'Copy';
+	    }, 2000);
+	  });
 });
