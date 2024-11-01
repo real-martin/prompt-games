@@ -20,11 +20,11 @@ Turn your interactions with AI chatbots into entertaining and interactive experi
 
 # Collection
 
-[1 - Guess The Number Game](./prompts/1-9/1.md)  
+[1 - Guess The Number](./prompts/1-9/1.md)  
 [2 - Guess The Meaning of Letters](./prompts/1-9/2.md)  
-[3 - Word Chain Game](./prompts/1-9/3.md)  
+[3 - Word Chain](./prompts/1-9/3.md)  
 [4 - Riddle Me This](./prompts/1-9/4.md)  
 [5 - Word Guess](./prompts/1-9/5.md)  
 [6 - Trivia Challenge](./prompts/1-9/6.md)  
 [7 - Anagram Challenge](./prompts/1-9/7.md)  
-[8 - Tic-Tac-Toe Game](./prompts/1-9/8.md)  
+[8 - Tic-Tac-Toe](./prompts/1-9/8.md)  
