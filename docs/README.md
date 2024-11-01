@@ -26,3 +26,4 @@ Turn your interactions with AI chatbots into entertaining and interactive experi
 [4 - Riddle Me This](./prompts/1-9/4.md)  
 [5 - Word Guess](./prompts/1-9/5.md)  
 [6 - Trivia Challenge](./prompts/1-9/6.md)  
+[7 - Anagram Challenge](./prompts/1-9/7.md)  
