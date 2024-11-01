@@ -24,3 +24,4 @@ Turn your interactions with AI chatbots into entertaining and interactive experi
 [2 - Guess The Meaning of Letters](./prompts/1-9/2.md)  
 [3 - Word Chain Game](./prompts/1-9/3.md)  
 [4 - Riddle Me This](./prompts/1-9/4.md)  
+[5 - Word Guess](./prompts/1-9/5.md)  
